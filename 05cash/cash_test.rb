@@ -19,7 +19,7 @@ class CashTest < Minitest::Test
       simulate_stdin("10.7") { load "cash.rb" }
     end
 
-    assert_equal "12", output.chomp[-2..-1], "Change owned: 10.7"
+    assert_equal "12", output.chomp[-2..], "Change owned: 10.7"
   end
 
   def test_5_coins_needed_for_3_33_soles_rounded_to_3_3
