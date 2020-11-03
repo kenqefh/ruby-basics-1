@@ -14,7 +14,7 @@ class MarioTest < Minitest::Test
 
     pyramid = "#\n"
 
-    assert_equal pyramid, output[-(height**2 + height)..]
+    assert_equal pyramid, output[-(height**2 + height)..-1]
   end
 
   def test_print_pyramid_of_height_2
@@ -25,7 +25,7 @@ class MarioTest < Minitest::Test
 
     pyramid = " #\n##\n"
 
-    assert_equal pyramid, output[-(height**2 + height)..]
+    assert_equal pyramid, output[-(height**2 + height)..-1]
   end
 
   def test_print_pyramid_of_height_4
@@ -36,7 +36,7 @@ class MarioTest < Minitest::Test
 
     pyramid = "   #\n  ##\n ###\n####\n"
 
-    assert_equal  pyramid, output[-(height**2 + height)..]
+    assert_equal  pyramid, output[-(height**2 + height)..-1]
   end
 
   def test_ask_multiple_times_until_get_a_valid_input
@@ -48,6 +48,6 @@ class MarioTest < Minitest::Test
 
     pyramid = "    #\n   ##\n  ###\n ####\n#####\n"
 
-    assert_equal pyramid, output[-(height**2 + height)..], "User inputs: #{inputs.join(', ')}"
+    assert_equal pyramid, output[-(height**2 + height)..-1], "User inputs: #{inputs.join(', ')}"
   end
 end

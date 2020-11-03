@@ -1,12 +1,12 @@
 AllCops:
-    NewCops: enable
+  NewCops: enable
 
 Style/StringLiterals:
-  Description: 'Checks if uses of quotes match the configured preference.'
-  StyleGuide: '#consistent-string-literals'
+  Description: "Checks if uses of quotes match the configured preference."
+  StyleGuide: "#consistent-string-literals"
   Enabled: true
-  VersionAdded: '0.9'
-  VersionChanged: '0.36'
+  VersionAdded: "0.9"
+  VersionChanged: "0.36"
   EnforcedStyle: double_quotes
   SupportedStyles:
     - single_quotes
@@ -17,11 +17,11 @@ Style/StringLiterals:
 
 Style/FrozenStringLiteralComment:
   Description: >-
-                 Add the frozen_string_literal comment to the top of files
-                 to help transition to frozen string literals by default.
+    Add the frozen_string_literal comment to the top of files
+    to help transition to frozen string literals by default.
   Enabled: false
-  VersionAdded: '0.36'
-  VersionChanged: '0.79'
+  VersionAdded: "0.36"
+  VersionChanged: "0.79"
   EnforcedStyle: always
   SupportedStyles:
     # `always` will always add the frozen string literal comment to a file
@@ -37,10 +37,14 @@ Style/FrozenStringLiteralComment:
     - never
   SafeAutoCorrect: false
 
-Style/Documentation:
-  Description: 'Document classes and non-namespace modules.'
-  Enabled: false
-  VersionAdded: '0.9'
+Style/SlicingWithRange:
   Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
+    - "*/*_test.rb"
+
+Style/Documentation:
+  Description: "Document classes and non-namespace modules."
+  Enabled: false
+  VersionAdded: "0.9"
+  Exclude:
+    - "spec/**/*"
+    - "test/**/*"
